@@ -21,7 +21,7 @@ function Hero() {
         {/* Image */}
         <div className="order-first md:order-last">
           <img
-            src="/src/assets/hero.png"
+            src="/src/assets/Home.webp"
             alt="Students at Pavna School campus"
             className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl shadow-lg"
           />
