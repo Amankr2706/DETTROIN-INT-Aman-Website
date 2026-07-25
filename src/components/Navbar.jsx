@@ -26,11 +26,11 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <nav className="bg-white dark:bg-slate-900 shadow-md fixed w-full top-0 left-0 z-50 transition-colors">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         <img src={logo} alt="Pavna School logo" className="h-10 sm:h-12 w-auto" />
 
-        <ul className="hidden lg:flex gap-6 font-medium text-gray-700 text-sm">
+        <ul className="hidden lg:flex gap-6 font-medium text-gray-700 dark:text-gray-200 text-sm">
           {navItems.map((item) => (
             <li
               key={item.label}
@@ -38,17 +38,17 @@ function Navbar() {
               onMouseEnter={() => item.dropdown && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <span className="hover:text-teal-700 cursor-pointer transition flex items-center gap-1">
+              <span className="hover:text-teal-700 dark:hover:text-teal-400 cursor-pointer transition flex items-center gap-1">
                 {item.label}
                 {item.dropdown && <span className="text-xs">▾</span>}
               </span>
 
               {item.dropdown && openDropdown === item.label && (
-                <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] border border-gray-100">
+                <ul className="absolute top-full left-0 bg-white dark:bg-slate-800 shadow-lg rounded-md py-2 min-w-[200px] border border-gray-100 dark:border-slate-700">
                   {item.dropdown.map((sub) => (
                     <li
                       key={sub}
-                      className="px-4 py-2 hover:bg-teal-50 hover:text-teal-700 cursor-pointer transition text-sm"
+                      className="px-4 py-2 hover:bg-teal-50 dark:hover:bg-slate-700 hover:text-teal-700 dark:hover:text-teal-400 cursor-pointer transition text-sm"
                     >
                       {sub}
                     </li>
@@ -69,17 +69,20 @@ function Navbar() {
           </button>
         </div>
 
-        <button className="lg:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="lg:hidden text-2xl text-gray-700 dark:text-gray-200"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? "✕" : "☰"}
         </button>
       </div>
 
       {isOpen && (
-        <ul className="lg:hidden flex flex-col bg-white shadow-md py-4 gap-1 font-medium text-gray-700 max-h-[70vh] overflow-y-auto">
+        <ul className="lg:hidden flex flex-col bg-white dark:bg-slate-900 shadow-md py-4 gap-1 font-medium text-gray-700 dark:text-gray-200 max-h-[70vh] overflow-y-auto">
           {navItems.map((item) => (
             <li key={item.label} className="px-4">
               <div
-                className="flex justify-between items-center py-2 cursor-pointer hover:text-teal-700"
+                className="flex justify-between items-center py-2 cursor-pointer hover:text-teal-700 dark:hover:text-teal-400"
                 onClick={() =>
                   setOpenDropdown(openDropdown === item.label ? null : item.label)
                 }
@@ -92,7 +95,7 @@ function Navbar() {
                   {item.dropdown.map((sub) => (
                     <li
                       key={sub}
-                      className="py-1.5 text-sm text-gray-600 hover:text-teal-700 cursor-pointer"
+                      className="py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-teal-700 dark:hover:text-teal-400 cursor-pointer"
                     >
                       {sub}
                     </li>

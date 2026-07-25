@@ -13,7 +13,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-lg transition"
+      className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 text-lg transition"
       aria-label="Toggle dark mode"
     >
       {isDark ? "☀️" : "🌙"}
