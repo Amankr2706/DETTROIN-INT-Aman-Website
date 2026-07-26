@@ -4,6 +4,9 @@ import Stats from "./components/Stats";
 import About from "./components/About";
 import Facilities from "./components/Facilities";
 import Gallery from "./components/Gallery";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <About />
       <Facilities />
       <Gallery />
+       <FAQ />
+      <Contact />
+      <Footer />
     </div>
   );
 }

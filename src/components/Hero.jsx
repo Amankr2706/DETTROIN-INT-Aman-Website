@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="pt-20 min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 px-4 sm:px-8 transition-colors">
+    <section id="home" className="pt-20 min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 px-4 sm:px-8 transition-colors">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text content */}
         <div className="text-center md:text-left">

@@ -8,7 +8,7 @@ const galleryImages = [
 
 function Gallery() {
   return (
-    <section className="py-14 sm:py-20 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
+    <section id="gallery" className="py-14 sm:py-20 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <span className="inline-block bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-xs sm:text-sm font-medium px-3 py-1 rounded-full mb-3">

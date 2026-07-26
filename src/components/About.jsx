@@ -4,7 +4,7 @@ function About() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="py-14 sm:py-20 px-4 bg-white dark:bg-slate-900 transition-colors">
+    <section id="about"className="py-14 sm:py-20 px-4 bg-white dark:bg-slate-900 transition-colors">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image */}
         <div className="order-2 md:order-1">

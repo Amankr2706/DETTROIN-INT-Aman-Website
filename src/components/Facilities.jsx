@@ -43,7 +43,7 @@ const facilities = [
 
 function Facilities() {
   return (
-    <section className="py-14 sm:py-20 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
+    <section id="facilities"className="py-14 sm:py-20 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <span className="inline-block bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs sm:text-sm font-medium px-3 py-1 rounded-full mb-3">
