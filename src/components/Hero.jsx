@@ -1,3 +1,5 @@
+import heroImg from "../assets/home.webp";
+
 function Hero() {
   return (
     <section id="home" className="pt-20 min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 px-4 sm:px-8 transition-colors">
@@ -20,7 +22,7 @@ function Hero() {
         {/* Image */}
         <div className="order-first md:order-last">
           <img
-            src="/src/assets/home.webp"
+            src={heroImg}
             alt="Students at Pavna School campus"
             className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl shadow-lg"
           />

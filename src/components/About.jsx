@@ -1,5 +1,5 @@
 import { useState } from "react";
-import aboutImg from "../assets/about.webp";
+import aboutImg from "../assets/about.jpg";
 
 function About() {
   const [expanded, setExpanded] = useState(false);

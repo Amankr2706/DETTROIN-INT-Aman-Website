@@ -1,9 +1,15 @@
+import gallery1 from "../assets/gallery1.webp";
+import gallery2 from "../assets/gallery2.webp";
+import gallery3 from "../assets/gallery3.webp";
+import gallery4 from "../assets/gallery4.avif";
+import gallery5 from "../assets/gallery5.webp";
+
 const galleryImages = [
-  { src: "/src/assets/gallery1.webp", caption: "Student Activities" },
-  { src: "/src/assets/gallery2.webp", caption: "Classroom Learning" },
-  { src: "/src/assets/gallery3.webp", caption: "Sports & Athletics" },
-  { src: "/src/assets/gallery4.avif", caption: "School Events" },
-  { src: "/src/assets/gallery5.webp", caption: "Music & Arts" },
+  { src: gallery1, caption: "Student Activities" },
+  { src: gallery2, caption: "Classroom Learning" },
+  { src: gallery3, caption: "Sports & Athletics" },
+  { src: gallery4, caption: "School Events" },
+  { src: gallery5, caption: "Music & Arts" },
 ];
 
 function Gallery() {
