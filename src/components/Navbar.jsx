@@ -1,8 +1,10 @@
 import { useState } from "react";
 import logo from "../assets/logo.webp";
 import ThemeToggle from "./ThemeToggle";
+import AuthModal from "./AuthModal";
 
 function Navbar() {
+  const [authOpen, setAuthOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -96,6 +98,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
           <button
+            onClick={() => setAuthOpen(true)}
             className="w-9 h-9 flex items-center justify-center rounded-full bg-amber-500 hover:bg-amber-600 text-white transition"
             aria-label="Login"
           >
@@ -148,12 +151,15 @@ function Navbar() {
           ))}
           <li className="px-4 pt-2 flex gap-3">
             <ThemeToggle />
-            <button className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 rounded-full text-sm transition">
+            <button 
+            onClick={() => setAuthOpen(true)}
+            className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 rounded-full text-sm transition">
               Login
             </button>
           </li>
         </ul>
       )}
+      <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
     </nav>
   );
 }
