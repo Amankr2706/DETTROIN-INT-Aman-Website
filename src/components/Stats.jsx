@@ -8,17 +8,16 @@ const stats = [
   { label: "Years Legacy", value: 28, suffix: "+" },
 ];
 
-function useCountUp(target, isVisible, duration = 2000)
+function useCountUp(target, isVisible, duration = 2000) {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!isVisible) {
       setCount(0);
       return;
     }
-
     let startTime = null;
     let frameId;
-
     function animate(timestamp) {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
@@ -28,7 +27,6 @@ function useCountUp(target, isVisible, duration = 2000)
       }
     }
     frameId = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(frameId);
   }, [isVisible, target, duration]);
 
@@ -52,17 +50,14 @@ function Stats() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      console.log("Stats visible?", entry.isIntersecting, "ratio:", entry.intersectionRatio);
-      setIsVisible(entry.isIntersecting);
-    },
-    { threshold: 0.2 }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
     );
-
     const currentRef = sectionRef.current;
     if (currentRef) observer.observe(currentRef);
-
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
