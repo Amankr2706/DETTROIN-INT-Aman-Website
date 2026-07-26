@@ -1,9 +1,9 @@
 const galleryImages = [
-  { src: "/src/assets/event.webp", caption: "Student Activities" },
-  { src: "/src/assets/classroom.webp", caption: "Classroom Learning" },
-  { src: "/src/assets/sports.webp", caption: "Sports & Athletics" },
-  { src: "/src/assets/gallery1.avif", caption: "School Events" },
-  { src: "/src/assets/music.webp", caption: "Music & Arts" },
+  { src: "/src/assets/gallery1.webp", caption: "Student Activities" },
+  { src: "/src/assets/gallery2.webp", caption: "Classroom Learning" },
+  { src: "/src/assets/gallery3.webp", caption: "Sports & Athletics" },
+  { src: "/src/assets/gallery4.avif", caption: "School Events" },
+  { src: "/src/assets/gallery5.webp", caption: "Music & Arts" },
 ];
 
 function Gallery() {

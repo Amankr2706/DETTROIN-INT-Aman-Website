@@ -29,7 +29,7 @@ function Navbar() {
       label: "Infrastructure",
       href:  "#infrastructure",
       dropdown: [
-        { label: "Campus & Labs", href: "#facilities" },
+        { label: "Campus & Labs", href: "#infrastructure" },
         { label: "Photo Gallery", href: "#gallery" },
       ],
     },

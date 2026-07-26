@@ -2,22 +2,22 @@ const infraItems = [
   {
     title: "Computer Lab",
     desc: "Modern systems with high-speed internet, coding tools, and hands-on tech sessions for every grade.",
-    img: "/src/assets/images/lab.jpg",
+    img: "/src/assets/comp lab.webp",
   },
   {
     title: "Science Laboratory",
     desc: "Fully equipped physics, chemistry, and biology labs encouraging practical, experiment-based learning.",
-    img: "/src/assets/images/lab.jpg",
+    img: "/src/assets/lab.avif",
   },
   {
     title: "Library",
     desc: "A quiet, well-stocked space with thousands of titles, digital resources, and dedicated reading zones.",
-    img: "/src/assets/images/library.jpg",
+    img: "/src/assets/lib.webp",
   },
   {
     title: "Sports Complex",
     desc: "Outdoor grounds and indoor courts for cricket, football, basketball, and athletics training.",
-    img: "/src/assets/images/sports.jpg",
+    img: "/src/assets/sports.avif",
   },
 ];
 
