@@ -1,4 +1,5 @@
 import { useState } from "react";
+import aboutImg from "../assets/about.webp";
 
 function About() {
   const [expanded, setExpanded] = useState(false);
@@ -8,7 +9,7 @@ function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
           <img
-            src="/src/assets/about.webp"
+            src={aboutImg}
             alt="Students learning at Pavna School"
             className="w-full h-64 sm:h-80 md:h-[420px] object-cover rounded-2xl shadow-md"
           />
