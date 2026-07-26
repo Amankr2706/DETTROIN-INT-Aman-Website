@@ -26,11 +26,20 @@ function Navbar() {
     },
     { label: "Gallery", href: "#gallery", dropdown: null },
     {
+      label: "Infrastructure",
+      href:  "#infrastructure",
+      dropdown: [
+        { label: "Campus & Labs", href: "#facilities" },
+        { label: "Photo Gallery", href: "#gallery" },
+      ],
+    },
+    {
       label: "Admission",
       href: "#contact",
       dropdown: [
-        { label: "Admission Process", href: "#faq" },
-        { label: "Contact Us", href: "#contact" },
+        { label: "Apply Now", href: "#contact" },
+        { label: "Admission FAQs", href: "#faq" },
+        { label: "Contact", href: "#contact" },
       ],
     },
     { label: "Contact Us", href: "#contact", dropdown: null },
@@ -49,7 +58,7 @@ function Navbar() {
         <img src={logo} alt="Pavna School logo" className="h-10 sm:h-12 w-auto" />
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-6 font-medium text-gray-700 dark:text-gray-200 text-sm">
+        <ul className="hidden lg:flex gap-5 font-medium text-gray-700 dark:text-gray-200 text-sm">
           {navItems.map((item) => (
             <li
               key={item.label}
@@ -59,7 +68,7 @@ function Navbar() {
             >
               <button
                 onClick={() => scrollTo(item.href)}
-                className="hover:text-teal-700 dark:hover:text-teal-400 cursor-pointer transition flex items-center gap-1"
+                className="hover:text-teal-700 dark:hover:text-teal-400 cursor-pointer transition flex items-center gap-1 whitespace-nowrap"
               >
                 {item.label}
                 {item.dropdown && <span className="text-xs">▾</span>}
