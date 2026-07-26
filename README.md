@@ -1,16 +1,24 @@
-# React + Vite
+# Pavna School — Redesigned Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Intern Details
+- Full Name: Aman Kumar Raman
+- Intern ID: [from your Dettroin email/portal]
+- Email: amankumarraman27@gmail.com
+- GitHub Username: Amankr2706
+- Selected Website: https://pavnaschoolaligarh.com/
+- Live Demo Link: 
 
-Currently, two official plugins are available:
+## Technologies Used
+- React (Vite)
+- Tailwind CSS
+- React Hooks (useState, useEffect, useRef)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Improvements Made
+- Simplified navigation from deeply nested dropdowns to a cleaner structure with working anchor links
+- Removed duplicated content sections present on the original site
+- Added animated stats counter (count-up on scroll)
+- Added dark/light mode toggle for accessibility and user preference
+- Added FAQ accordion for better content organization
+- Fully responsive design (mobile, tablet, desktop)
+- Improved accessibility with proper alt text on all images
+- New custom color palette (teal/amber) and typography (Poppins/Inter) distinct from the original site
