@@ -39,7 +39,7 @@ function Navbar() {
       label: "Admission",
       href: "#contact",
       dropdown: [
-        { label: "Apply Now", href: "#contact" },
+        { label: "Apply Now", href: "#home" },
         { label: "Admission FAQs", href: "#faq" },
         { label: "Contact", href: "#contact" },
       ],

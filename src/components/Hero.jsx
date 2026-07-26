@@ -2,8 +2,7 @@ function Hero() {
   return (
     <section id="home" className="pt-20 min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 px-4 sm:px-8 transition-colors">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Text content */}
-        <div className="text-center md:text-left">
+      <div className="text-center md:text-left">
           <span className="inline-block bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs sm:text-sm font-medium px-3 py-1 rounded-full mb-4">
             Aligarh Campus
           </span>

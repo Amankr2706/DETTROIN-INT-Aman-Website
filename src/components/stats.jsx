@@ -8,20 +8,29 @@ const stats = [
   { label: "Years Legacy", value: 28, suffix: "+" },
 ];
 
-function useCountUp(target, isVisible, duration = 1500) {
+function useCountUp(target, isVisible, duration = 35000) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible) {
+      setCount(0);
+      return;
+    }
+
     let startTime = null;
+    let frameId;
 
     function animate(timestamp) {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       setCount(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(animate);
+      if (progress < 1) {
+        frameId = requestAnimationFrame(animate);
+      }
     }
-    requestAnimationFrame(animate);
+    frameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(frameId);
   }, [isVisible, target, duration]);
 
   return count;
@@ -34,7 +43,7 @@ function StatItem({ value, label, suffix, isVisible }) {
       <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
         {count.toLocaleString()}{suffix}
       </p>
-      <p className="text-teal-100 text-xs sm:text-sm mt-1">{label}</p>
+      <p className="text-teal-100 dark:text-teal-300 text-xs sm:text-sm mt-1">{label}</p>
     </div>
   );
 }
@@ -44,21 +53,27 @@ function Stats() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      console.log("Stats visible?", entry.isIntersecting, "ratio:", entry.intersectionRatio);
+      setIsVisible(entry.isIntersecting);
+    },
+    { threshold: 0.2 }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+
+    const currentRef = sectionRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-teal-700 py-10 sm:py-14 px-4">
+    <section
+      ref={sectionRef}
+      className="bg-teal-700 dark:bg-slate-900 py-10 sm:py-14 px-4 transition-colors border-b border-transparent dark:border-slate-800"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
         {stats.map((stat) => (
           <StatItem key={stat.label} {...stat} isVisible={isVisible} />
