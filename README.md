@@ -2,7 +2,7 @@
 
 ## Intern Details
 - Full Name: Aman Kumar Raman
-- Intern ID: [from your Dettroin email/portal]
+- Intern ID: N/A
 - Email: amankumarraman27@gmail.com
 - GitHub Username: Amankr2706
 - Selected Website: https://pavnaschoolaligarh.com/
