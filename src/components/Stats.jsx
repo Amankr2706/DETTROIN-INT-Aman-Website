@@ -8,8 +8,7 @@ const stats = [
   { label: "Years Legacy", value: 28, suffix: "+" },
 ];
 
-function useCountUp(target, isVisible, duration = 2000) {
-  const [count, setCount] = useState(0);
+function useCountUp(target, isVisible, duration = 2000)
 
   useEffect(() => {
     if (!isVisible) {
