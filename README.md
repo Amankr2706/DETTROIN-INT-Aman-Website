@@ -6,7 +6,7 @@
 - Email: amankumarraman27@gmail.com
 - GitHub Username: Amankr2706
 - Selected Website: https://pavnaschoolaligarh.com/
-- Live Demo Link: https://dettroin-int-aman-website-k6y5qv1no-aman-1eb0.vercel.app/
+- Live Demo Link: https://dettroin-int-aman-website.vercel.app/
 
 ## Technologies Used
 - React (Vite)
